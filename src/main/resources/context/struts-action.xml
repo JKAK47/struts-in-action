@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- action demo  -->
+    <package name="struts2demo" namespace="/mystruts"
+             extends="struts-default">
+        <!-- 定义了一个action， 如果需要调用到这个action，需要通过 //mystruts/sum.action 才能调用到 -->
+        <action name="sum" class="org.vincent.struts.action.FirstAction">
+            <result name="positive">/WEB-INF/pages/positive.jsp</result>
+            <result name="negative">/WEB-INF/pages/negative.jsp</result>
+        </action>
+    </package>
+</struts>
