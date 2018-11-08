@@ -14,6 +14,9 @@
 </head>
 
 <body>
+<%--
+    直接获取到计算结果
+--%>
 代数和为负整数<h1><s:property value="sum" /></h1>
 
 </body>

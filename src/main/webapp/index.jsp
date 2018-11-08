@@ -14,7 +14,7 @@
     out.println("<h2> basePath "+ basePath+" </h2>");
     out.println("<h2> ServletPath\t"+ ServletPath+" </h2>");
     out.println("<h2> realPath\t"+ realPath+" </h2>");
-    out.println("<h2> request.getRequestURI()\t"+request.getRequestURI()+" </h2>");
+    out.println("<h2> request.getRequestURI(): \t"+request.getRequestURI()+" </h2>");
 
 %>
 </body>

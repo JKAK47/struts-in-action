@@ -215,7 +215,7 @@
         <!-- struts 2.5.17  dependency lib jar stop -->
         <!-- web lib : spirng-web , struts2  stop -->
 
-        <!-- web runtime lib begin -->
+        <!-- tomcat 8.x  web runtime lib begin -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>

@@ -18,7 +18,8 @@
 <br/>
 <%--
  action="mystruts/sum.action" 就是 context/struts-action.xml 中定义的 package 的 namespace="/mystruts"
- 加上 action name="sum" 属性拼接起来的
+ 加上 action name="sum" 属性拼接起来的。
+ form 表达数据通过 post 方式提交。
 --%>
 <s:form action="mystruts/sum.action" >
     <s:textfield name="operand1" label=" 操作数1"/>

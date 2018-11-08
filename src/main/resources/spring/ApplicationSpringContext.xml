@@ -31,7 +31,6 @@
                 <!-- 可以配置多个 属性文件源 -->
                 <!-- 导入数据源配置  -->
                 <value>classpath:db/jdbc.properties</value>
-
             </list>
         </property>
     </bean>

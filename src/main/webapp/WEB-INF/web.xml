@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
-    <!-- tomcat 8.x 版本 servlet 3.1 JSP 2.3, EL 3.0  -->
+    <!-- tomcat 8.x 版本 servlet 3.1, JSP 2.3, EL 3.0 ,jstl 1.2 -->
     <display-name>display-name 只是提示作用可以删除</display-name>
     <welcome-file-list>
-        <!-- 定义默认url访问 的首页。 -->
+        <!-- 定义默认url访问 的首页。安装文件名在webapp目录下 一个一个寻找直到找到同名的文件。  -->
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
@@ -14,7 +14,7 @@
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
-    <!-- SpringMVC 统一编码过滤器配置 开始 -->
+    <!-- Springweb 统一编码过滤器配置 开始 -->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -41,12 +41,12 @@
         <filter-name>characterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <!-- SpringMVC 统一编码配置 结束 -->
+    <!-- Spring web 统一编码配置 结束 -->
 
     <!-- Struts2的入口点是一个过滤器(Filter)。因此，Struts2要按过滤器的方式配置。下面是在web.xml中配置Struts2的代码： -->
     <!-- 配置 struts2 核心过滤器 拦截所有请求交给struts2去处理 -->
     <!--
-      以上的配置是 Struts2.5 版本的配置，2.3 版本及其以下的版本的 filter-class 有点不同，
+      以上的配置是 Struts 2.5 版本的配置，2.3 版本及其以下的版本的 filter-class 有点不同，
       为 org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter。具体以官方参考资料为准。
     -->
     <filter>
@@ -60,8 +60,7 @@
 
     <!-- struts 2.5 必须配置spring 如果只是单纯Struts2 起不来 begin -->
     <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener
-        </listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <context-param>
         <param-name>contextConfigLocation</param-name>
