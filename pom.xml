@@ -244,6 +244,17 @@
 
     <build>
         <finalName>struts-in-action</finalName>
+        <resources>
+            <resource>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
             <plugins>
                 <!-- clean 清理周期插件
                          并将清理命令绑定到 打包周期的initialize阶段
